@@ -1,6 +1,9 @@
-from tools.ingest_paper import ingest_topic
+from tools.vector_search import vector_search
 
-topic = "Graph RAG"
+query = "multihop reasoning"
 
-ingest_topic(topic, 3)
+papers = vector_search(query, top_k=1)
 
+for p in papers:
+    print("\nTitle:", p["title"])
+    print("Score:", p["score"])

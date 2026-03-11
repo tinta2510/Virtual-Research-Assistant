@@ -1,6 +1,6 @@
-from tools.search_arxiv import search_arxiv
+from tools.arxiv_search import search_arxiv
 from database.paper_repository import PaperRepository
-from models.embeddings import embed_text
+from models.embedding import embed_text
 
 def ingest_topic(topic: str, max_results: int = 20):
 
