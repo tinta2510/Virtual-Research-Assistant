@@ -1,12 +1,12 @@
 from database.neo4j_client import Neo4jClient
-from arxiv import paper
+from arxiv import Result
 
 class PaperRepository:
 
     def __init__(self):
         self.db = Neo4jClient()
 
-    def create_paper(self, paper: paper, embedding: list):
+    def create_paper(self, paper: Result, embedding: list):
         """
         Parameters:
         - paper (arxiv.paper): The paper to be added to the database
@@ -17,7 +17,7 @@ class PaperRepository:
             entry_id: $entry_id,
             title: $title,
             abstract: $abstract,
-            year: $year
+            year: $year,
             embedding: $embedding
         })
         """

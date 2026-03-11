@@ -8,3 +8,8 @@ OPTIONS {
    `vector.similarity_function`: 'cosine'
  }
 }
+
+// Match paper
+MATCH (p:Paper)
+RETURN p.title, p.year
+LIMIT 10
