@@ -1,9 +1,7 @@
-from tools.vector_search import vector_search
+from utils.ingest_paper import ingest_topic
 
-query = "multihop reasoning"
+if __name__ == "__main__":
 
-papers = vector_search(query, top_k=1)
+    topic = "knowledge graph-based recommender"
 
-for p in papers:
-    print("\nTitle:", p["title"])
-    print("Score:", p["score"])
+    ingest_topic(topic, max_results=10)
