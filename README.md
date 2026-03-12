@@ -17,3 +17,6 @@ Agent retrieves:
    └─ graph relations
    ↓
 LLM generates literature review
+
+
+![alt text](image.png)

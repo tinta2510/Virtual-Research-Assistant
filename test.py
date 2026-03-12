@@ -1,7 +1,11 @@
-from utils.ingest_paper import ingest_topic
+from tools.retriever import retrieve_relevant_chunks
 
-if __name__ == "__main__":
+query = "methods to detect hallucination in large language models"
 
-    topic = "knowledge graph-based recommender"
+docs = retrieve_relevant_chunks(query)
 
-    ingest_topic(topic, max_results=10)
+for d in docs:
+
+    print("\nTITLE:", d["title"])
+    print("AUTHORS:", d["authors"])
+    print("TEXT:", d["chunk_text"][:200])
